@@ -1,0 +1,4 @@
+﻿  5430.c
+D:\KNU 2학년\알고_스터디\pre_algo\cinderella\BAEKJOON_5430\BAEKJOON_5430\5430.c(25,7): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\KNU 2학년\알고_스터디\pre_algo\cinderella\BAEKJOON_5430\BAEKJOON_5430\5430.c(55,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  BAEKJOON_5430.vcxproj -> D:\KNU 2학년\알고_스터디\pre_algo\cinderella\BAEKJOON_5430\Debug\BAEKJOON_5430.exe
