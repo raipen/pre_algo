@@ -1,2 +1,6 @@
-dsaf
-hnggdhfsthst
+#include <stdio.h>
+
+int main()
+{
+	return 0;
+}
