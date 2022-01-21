@@ -1,0 +1,3 @@
+﻿  1033.c
+C:\Users\kimjh\source\repos\BAEKJOON_1033\BAEKJOON_1033\1033.c(40,50): warning C4101: 'tmp' :참조되지 않은 지역 변수입니다.
+  BAEKJOON_1033.vcxproj -> C:\Users\kimjh\source\repos\BAEKJOON_1033\Debug\BAEKJOON_1033.exe
