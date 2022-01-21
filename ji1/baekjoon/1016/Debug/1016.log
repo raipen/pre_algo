@@ -1,0 +1,3 @@
+﻿  1016main.c
+I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\1016\1016main.c(18,30): warning C4244: '함수': '__int64'에서 'size_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  1016.vcxproj -> I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\Debug\1016.exe
