@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 void solu();
-int queue[101];
+int queue[101000];
 char command[100001];
 int front, rear,version;
 void enq(int item);
@@ -25,6 +25,7 @@ int main()
 void solu()
 {
 	int num,item,j=0;
+	getchar();
 	scanf("%s",command);
 	scanf("%d", &num);
 	getchar(); //\n ºñ¿ì±â
