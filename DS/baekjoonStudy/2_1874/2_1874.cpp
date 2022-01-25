@@ -45,6 +45,11 @@ int main(void) {
 		}
 	}
 	Aprint(printArr, n*2);
+
+	delete[]stack;
+	delete[]arr;
+	delete[]printArr;
+
 	return 0;
 }
 
