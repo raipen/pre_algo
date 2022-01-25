@@ -54,7 +54,7 @@ int main(void) {
 }
 
 void push(char item){
-	if (top >= MAX_STACK_SIZE) {
+	if (top >= MAX_STACK_SIZE - 1) {
 		exit(-1);
 	}
 	stack[++top] = item;
