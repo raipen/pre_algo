@@ -1,2 +1,4 @@
 ﻿  2110.c
+C:\Users\momnp\OneDrive\바탕 화면\백준 스터디\pre_algo\down\beakjoon\beakjoon\2110.c(14,13): warning C4101: 'save2' :참조되지 않은 지역 변수입니다.
+C:\Users\momnp\OneDrive\바탕 화면\백준 스터디\pre_algo\down\beakjoon\beakjoon\2110.c(14,6): warning C4101: 'save1' :참조되지 않은 지역 변수입니다.
   beakjoon.vcxproj -> C:\Users\momnp\OneDrive\바탕 화면\백준 스터디\pre_algo\down\beakjoon\x64\Debug\beakjoon.exe
