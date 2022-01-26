@@ -1,13 +1,12 @@
 #include <iostream>
 #include <cstring>
-#include <algorithm>
 #include <deque>
 
 using namespace std;
 
 void revArr();
-deque<int> delArr(deque<int> intStr);
-int dupR(char* str);
+void delArr();
+deque<int> intStr;
 
 bool fwd = true;
 
@@ -15,16 +14,12 @@ int main(void) {
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 	int T = 0;
 	int num = 0;
-	int d = 0;
-	int j = 0;
-	int k = 0;
 	char e = '\0';
-	int insi = 0;
-	int strl, strc = 0;
-	char control[100000] = "\0";
-	char str[400001] = "\0";
-	deque<int> intStr;
-
+	//char control[100002]";
+	//char str[200004];
+	string control;
+	string str;
+	
 	cin >> T;
 
 	for (int i = 0; i < T; i++) {
@@ -34,9 +29,8 @@ int main(void) {
 		cin >> control;
 		cin >> num;
 		cin >> str;
-		strl = strlen(str);
-		strc = strlen(control);
-		for (int j = 0; j < strl; j++) {
+
+		for (int j = 0; str[j]!='\0'; j++) {
 			if (str[j] > 47 && str[j] < 58) {
 				if (str[j + 1] > 47 && str[j + 1] < 58) {
 					if (str[j + 2] > 47 && str[j + 2] < 58) {
@@ -51,61 +45,49 @@ int main(void) {
 				intStr.push_back(str[j] - 48);
 			}
 		}
-		for (j = 0; j < strc; j++) {
+		for (int j = 0; control[j] != '\0' && e != 'e'; j++) {
 			switch (control[j]) {
 			case 'R':
-				d = dupR(&control[j]);
-				j = j + d;
-				if (d % 2 == 0) revArr();
+				revArr();
 				break;
 			case 'D':
-				if (intStr.size() == 0) {
+				if (num == 0) {
 					cout << "error\n";
 					e = 'e';
-					j = strc - 1;
 					break;
 				}
-				intStr = delArr(intStr);
+				delArr();
+				num--;
 				break;
 			}
 		}
-		if (intStr.size() == 0 && e == 'e') continue;
-		insi = intStr.size();
+		if (num == 0 && e == 'e') continue;
 		cout << '[';
-		if (fwd == true) {
-			for (int i = 0; i < insi; i++) {
-				cout << intStr[i];
-				if (i != insi - 1)	cout << ',';
+		if (num > 0) {
+			if (fwd == true) {
+				for (int i = 0; i < num; i++) {
+					cout << intStr[i];
+					if (i != num - 1)	cout << ',';
+				}
 			}
-		}
-		else {
-			for (int i = insi - 1; i >= 0; i--) {
-				cout << intStr[i];
-				if (i != 0)	cout << ',';
+			else {
+				for (int i = num - 1; i >= 0; i--) {
+					cout << intStr[i];
+					if (i != 0)	cout << ',';
+				}
 			}
 		}
 		cout << "]\n";
 	}
+
+	return 0;
 }
 
 void revArr() {
 	if (fwd == true) fwd = false;
 	else fwd = true;
 }
-deque<int> delArr(deque<int> intStr) {
+void delArr() {
 	if (fwd == true) intStr.pop_front();
 	else intStr.pop_back();
-
-	return intStr;
 }
-
-int dupR(char* str) {
-	int i;
-	int num = strlen(str);
-	for (i = 0; i < num; i++) {
-		if (str[i] != str[i + 1]) break;
-	}
-
-	return i;
-}
-
