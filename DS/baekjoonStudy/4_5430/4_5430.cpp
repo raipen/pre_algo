@@ -15,8 +15,8 @@ int main(void) {
 	int T = 0;
 	int num = 0;
 	char e = '\0';
-	//char control[100002]";
-	//char str[200004];
+	//char control[100001];
+	//char str[400002]; 숫자 100이 10만개 들어간다고 생각하면 3*10만이고 콤마가 99999개, [] 2개 해서 총 400001개여야 함
 	string control;
 	string str;
 	
