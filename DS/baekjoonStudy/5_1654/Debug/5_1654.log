@@ -1,0 +1,4 @@
+﻿  5_1654.cpp
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\5_1654\5_1654.cpp(17,26): warning C4244: '초기화 중': '__int64'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\5_1654\5_1654.cpp(25,15): warning C4244: '=': 'long double'에서 '__int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  5_1654.vcxproj -> C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\Debug\5_1654.exe
