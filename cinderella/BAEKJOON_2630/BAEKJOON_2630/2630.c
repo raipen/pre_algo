@@ -10,7 +10,7 @@ int ColorCheck(int, int, int, int, int);
 //var
 int PaperSize, PaperColor;
 int PaperMatrix[MAX_PAPER_SIZE][MAX_PAPER_SIZE];
-int WhiteBlueCount[2] = { 0,0 };
+int PaperCount[2] = { 0,0 };
 
 //main
 int main(void)
@@ -26,13 +26,13 @@ int main(void)
 		}
 	}
 
-	if (ColorCheck(0, 0, 0, 0, PaperSize)) printf("%d\n%d", WhiteBlueCount[0], WhiteBlueCount[1]);
+	if (ColorCheck(0, 0, 0, 0, PaperSize)) printf("%d\n%d", PaperCount[0], PaperCount[1]);
 	else
 	{
 		DivQuarter(0, 0, PaperSize);
-		printf("%d\n%d", WhiteBlueCount[0], WhiteBlueCount[1]);
+		printf("%d\n%d", PaperCount[0], PaperCount[1]);
 	}
-	
+
 	return 0;
 }
 
@@ -60,8 +60,7 @@ int ColorCheck(int xAxis, int yAxis, int xPos, int yPos, int DivSize)
 		}
 	}
 
-	if (!m) WhiteBlueCount[0]++;
-	else WhiteBlueCount[1]++;
-
+	if (m == 0) PaperCount[0]++;
+	else PaperCount[1]++;
 	return 1;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_VERTEX_SIZE 501
+#define MAX_VERTEX_SIZE 501		//0번째 index 귀찮아서 안씀
 
 int VertSize, EdgeSize;			//입력받는 Vertex, Edge 크기
 int RootCount, CaseCount = 0;	//트리의 Root 갯수 확인, Case 변수
