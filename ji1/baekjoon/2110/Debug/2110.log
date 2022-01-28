@@ -1,0 +1,4 @@
+﻿  2110main.c
+C:\Users\PC\Desktop\학교\알고리즘\pre_algo\ji1\baekjoon\2110\2110main.c(52,9): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\PC\Desktop\학교\알고리즘\pre_algo\ji1\baekjoon\2110\2110main.c(69,39): warning C4101: 't' :참조되지 않은 지역 변수입니다.
+  2110.vcxproj -> C:\Users\PC\Desktop\학교\알고리즘\pre_algo\ji1\baekjoon\Debug\2110.exe
