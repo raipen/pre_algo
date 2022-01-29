@@ -58,7 +58,7 @@ int main() {
 	}
 
 	enqueue(&x, 1); enqueue(&y, 1);
-	visited[1][1] = 1;
+	visited[1][1] = 1;	
 	enqueue(&z, ++count);
 	int n, m;
 	
