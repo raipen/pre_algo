@@ -17,9 +17,7 @@ int main(void)
 	for (int i = 1; i <= RowSize1; i++)
 	{
 		for (int j = 1; j <= ColSize1; j++)
-		{
 			cin >> Matrix1[i][j];
-		}
 	}
 
 	cin >> RowSize2;
@@ -27,9 +25,7 @@ int main(void)
 	for (int i = 1; i <= RowSize2; i++)
 	{
 		for (int j = 1; j <= ColSize2; j++)
-		{
 			cin >> Matrix2[i][j];
-		}
 	}
 
 	for (int i = 1; i <= RowSize1; i++)
@@ -37,9 +33,7 @@ int main(void)
 		for (int j = 1; j <= ColSize2; j++)
 		{
 			for (int k = 1; k <= ColSize1; k++)
-			{
 				MatrixResult[i][j] += Matrix1[i][k] * Matrix2[k][j];
-			}
 			cout << MatrixResult[i][j] << ' ';
 		}
 		cout << '\n';
