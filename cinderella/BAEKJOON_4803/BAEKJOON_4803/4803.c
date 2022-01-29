@@ -1,45 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_VERTEX_SIZE 501		//0¹øÂ° index ±ÍÂú¾Æ¼­ ¾È¾¸
+#define MAX_VERTEX_SIZE 501	//0ë²ˆì§¸ index ê·€ì°®ì•„ì„œ ì•ˆì”€
 
-int VertSize, EdgeSize;			//ÀÔ·Â¹Ş´Â Vertex, Edge Å©±â
-int RootCount, CaseCount = 0;	//Æ®¸®ÀÇ Root °¹¼ö È®ÀÎ, Case º¯¼ö
-int Vert_From, Vert_To;			//ÀÔ·Â¹Ş´Â Vertexµé
-int RootNode[MAX_VERTEX_SIZE];	//Union-Find AlgorithmÀÇ Parent ¹è¿­
+int VertSize, EdgeSize;		//ì…ë ¥ë°›ëŠ” Vertex, Edge í¬ê¸°
+int RootCount, CaseCount = 0;	//íŠ¸ë¦¬ì˜ Root ê°¯ìˆ˜ í™•ì¸, Case ë³€ìˆ˜
+int Vert_From, Vert_To;		//ì…ë ¥ë°›ëŠ” Vertexë“¤
+int RootNode[MAX_VERTEX_SIZE];	//Union-Find Algorithmì˜ Parent ë°°ì—´
 
-int RootFind(int x);			//Root ³ëµå Å½»ö ÇÔ¼ö
-void RootUnion(int x, int y);	//Root ³ëµåÀÇ º´ÇÕ	
+int RootFind(int x);		//Root ë…¸ë“œ íƒìƒ‰ í•¨ìˆ˜
+void RootUnion(int x, int y);	//Root ë…¸ë“œì˜ ë³‘í•©	
 
 int main(void)
 {
 	while (1)
 	{
-		//Vertsize, Edgesize ÀÔ·Â
+		//Vertsize, Edgesize ì…ë ¥
 		scanf_s("%d %d", &VertSize, &EdgeSize);
-		if (!VertSize && !EdgeSize) break;						//ÀÔ·ÂÀÌ 0 0ÀÏ ¶§ break
+		if (!VertSize && !EdgeSize) break;				//ì…ë ¥ì´ 0 0ì¼ ë•Œ break
 
 		//initialization
 		CaseCount++;
 		RootCount = 0;
 		for (int i = 0; i < MAX_VERTEX_SIZE; i++)
-			RootNode[i] = i;									//RootNode ¹è¿­ °¢ Ä­À» index°ªÀ¸·Î ÃÊ±âÈ­
-																//RootNode ¹è¿­ÀÇ 0¹øÂ° Ä­Àº »ç¿ëµÇÁö ¾ÊÀ¸¸ç, 0À¸·Î ÃÊ±âÈ­µÇ¾î ÀÖÀ½
+			RootNode[i] = i;					//RootNode ë°°ì—´ ê° ì¹¸ì„ indexê°’ìœ¼ë¡œ ì´ˆê¸°í™”
+										//RootNode ë°°ì—´ì˜ 0ë²ˆì§¸ ì¹¸ì€ ì‚¬ìš©ë˜ì§€ ì•Šìœ¼ë©°, 0ìœ¼ë¡œ ì´ˆê¸°í™”ë˜ì–´ ìˆìŒ
 
 		for (int i = 0; i < EdgeSize; i++)
 		{
 			scanf_s("%d %d", &Vert_From, &Vert_To);
 
-			//Vert_From°ú Vert_To °¢°¢ÀÇ Root Å½»ö
+			//Vert_Fromê³¼ Vert_To ê°ê°ì˜ Root íƒìƒ‰
 			Vert_From = RootFind(Vert_From);
 			Vert_To = RootFind(Vert_To);
 
-			if (Vert_From == Vert_To) RootNode[Vert_From] = 0;	//Root°¡ °°´Ù == ÀÌÁ¦ºÎÅÍ´Â CircuitÀÌ Á¸ÀçÇÑ´Ù -> 0À¸·Î °ª º¯°æÇØ ¹ö¸®±â
-			else RootUnion(Vert_From, Vert_To);					//RootUnion ÇÔ¼ö¸¦ ÅëÇØ Root ³ëµåÀÇ º´ÇÕ
+			if (Vert_From == Vert_To) RootNode[Vert_From] = 0;	//Rootê°€ ê°™ë‹¤ == ì´ì œë¶€í„°ëŠ” Circuitì´ ì¡´ì¬í•œë‹¤ -> 0ìœ¼ë¡œ ê°’ ë³€ê²½í•´ ë²„ë¦¬ê¸°
+			else RootUnion(Vert_From, Vert_To);			//RootUnion í•¨ìˆ˜ë¥¼ í†µí•´ Root ë…¸ë“œì˜ ë³‘í•©
 		}
 
 		for (int i = 1; i <= VertSize; i++)
-			if (RootNode[i] == i) RootCount++;					//RootNode ¹è¿­ °¢ Ä­ÀÇ °ªÀÌ º¯ÇÏÁö ¾ÊÀº °æ¿ì TreeÀÇ RootÀÓ -> Count++
+			if (RootNode[i] == i) RootCount++;			//RootNode ë°°ì—´ ê° ì¹¸ì˜ ê°’ì´ ë³€í•˜ì§€ ì•Šì€ ê²½ìš° Treeì˜ Rootì„ -> Count++
 
 		//print
 		printf("Case %d: ", CaseCount);
@@ -52,12 +52,12 @@ int main(void)
 }
 
 //Union-Find Algorithm
-int RootFind(int x)				//Àç±ÍÇÔ¼ö, RootNode[x]ÀÇ °ªÀÌ º¯ÇÏÁö ¾ÊÀº ÀÚ±âÀÚ½ÅÀÌ µÉ¶§±îÁö Àç±Í ¹İº¹ÇØ Root Ã£¾Æ°¡±â
+int RootFind(int x)		//ì¬ê·€í•¨ìˆ˜, RootNode[x]ì˜ ê°’ì´ ë³€í•˜ì§€ ì•Šì€ ìê¸°ìì‹ ì´ ë ë•Œê¹Œì§€ ì¬ê·€ ë°˜ë³µí•´ Root ì°¾ì•„ê°€ê¸°
 {
 	return (RootNode[x] == x) ? x : (RootNode[x] = RootFind(RootNode[x]));
 }
-void RootUnion(int x, int y)	//x = 0ÀÌ ¾Æ´Ñ °ª(Circuit ¾Æ´Ô), y = 0(Circiut »óÅÂ)ÀÏ ¶§ RootNode[x]ÀÇ °ª ¿ª½Ã 0À¸·Î ¹Ù²ãÁØ´Ù(Circuit »óÅÂ)
-{								//y = 0ÀÌ ¾Æ´Ñ °ª, x = 0ÀÏ ¶§¸¦ Æ÷ÇÔÇÑ ´Ù¸¥ »óÈ²¿¡¼­´Â ¸ğµÎ RootNode[y]ÀÇ °ªÀ» x·Î ¹Ù²ãÁØ´Ù
+void RootUnion(int x, int y)	//x = 0ì´ ì•„ë‹Œ ê°’(Circuit ì•„ë‹˜), y = 0(Circiut ìƒíƒœ)ì¼ ë•Œ RootNode[x]ì˜ ê°’ ì—­ì‹œ 0ìœ¼ë¡œ ë°”ê¿”ì¤€ë‹¤(Circuit ìƒíƒœ)
+{				//y = 0ì´ ì•„ë‹Œ ê°’, x = 0ì¼ ë•Œë¥¼ í¬í•¨í•œ ë‹¤ë¥¸ ìƒí™©ì—ì„œëŠ” ëª¨ë‘ RootNode[y]ì˜ ê°’ì„ xë¡œ ë°”ê¿”ì¤€ë‹¤
 	if (!y) RootNode[x] = y;
 	else RootNode[y] = x;
 }
