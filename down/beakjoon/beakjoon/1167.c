@@ -1,3 +1,4 @@
+//1167 트리의 지름
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
