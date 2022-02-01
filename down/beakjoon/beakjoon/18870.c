@@ -1,71 +1,71 @@
-//대체 어떻게 분할정복???????????
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_SIZE 1000001
-int ary[MAX_SIZE];
-int tmp[MAX_SIZE];
-int solution[MAX_SIZE];
+typedef struct item
+{
+	int num;
+	int index;
+}item;
+item ary[MAX_SIZE];
 int size;
 void solu();
-void remove();
-int press(int item);
 int compare(const void* a, const void* b);
+int compare1(const void* a, const void* b);
+int cnt;
 int main()
 {
 	scanf("%d", &size);
 	for (int i = 0; i < size; i++)
 	{
-		scanf("%d", &ary[i]);
-		tmp[i] = ary[i];
+		scanf("%d", &ary[i].num);
+		ary[i].index = i;
 	}
-	qsort(tmp, size, sizeof(int), compare);
+
+	qsort(ary, size, sizeof(*ary), compare);
 	solu();
+	qsort(ary, size, sizeof(*ary), compare1);
 	for (int i = 0; i < size; i++)
 	{
-		printf("%d ", solution[i]);
+		printf("%d ", ary[i].num);
 	}
+	return 0;
+}
+
+int compare(const void* a, const void* b)
+{
+	item num1 = *(item*)a;
+	item num2 = *(item*)b;
+
+	if (num1.num > num2.num)
+		return 1;
+
+	if (num1.num < num2.num)
+		return -1;
+
+	return 0;
+}
+int compare1(const void* a, const void* b)
+{
+	item num1 = *(item*)a;
+	item num2 = *(item*)b;
+
+	if (num1.index > num2.index)
+		return 1;
+
+	if (num1.index < num2.index)
+		return -1;
+
 	return 0;
 }
 void solu()
 {
-	int tmp;
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size-1; i++)
 	{
-		tmp = i;
+		if (ary[i + 1].num != ary[i].num)
+			ary[i].num = cnt++;
+		else
+			ary[i].num = cnt;
 	}
-}
-int press(int num)
-{
-	int cnt=0;
-	int save=num;
-	for (int i = 0; i < size; i++)
-	{
-		if (tmp[i] < num && tmp[i] != save)
-		{
-			cnt++;
-			save = tmp[i];
-		}
-	}
-	return cnt;
-}
-int compare(const void* a, const void* b)
-{
-	int num1 = *(int*)a;
-	int num2 = *(int*)b;
-
-	if (num1 > num2)
-		return -1;
-
-	if (num1 < num2)
-		return 1;
-
-	return 0;
-}
-void remove()
-{
-	for (int i = 0; i < size; i++)
-	{
-		tmp[i]
-	}
+	ary[size - 1].num = cnt;
 }
