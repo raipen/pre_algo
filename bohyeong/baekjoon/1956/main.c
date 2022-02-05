@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #define max 400
 
-int INF = 2000000;
+int INF = 4000000;
 int arr[max][max];
-int min = 2000000;
+int min = 4000000;
 int flag = 0;
 
 void floy(int size) {
