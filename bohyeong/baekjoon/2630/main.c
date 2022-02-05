@@ -4,14 +4,14 @@
 int cw = 0; int cb = 0;
 
 void merge(int** arr, int x, int y, int size) {
-	int fir = arr[x][y];
+	int fir = arr[x][y]; //기준점 
 	int flag = 0;
 	int mid;
 	//printf("x: %d, y: %d, size: %d\n", x, y, size);
 	
 	for (int i = x; i < x + size; i++) {
 		for (int j = y; j < y + size; j++) {
-			if (fir != arr[i][j]) {
+			if (fir != arr[i][j]) {//기준점과 다르다면
 				flag = 1;
 			}
 		}
@@ -25,12 +25,12 @@ void merge(int** arr, int x, int y, int size) {
 		merge(arr, x+mid, y+mid, size / 2); // 오른쪽 아래
 	}
 
-	else if (!flag) {
-		if (fir) {
-			cb++;
+	else if (!flag) {//기준점과 같으면
+		if (fir) {//기준점을 토대로
+			cb++; //blue ++
 		}
 		else {
-			cw++;
+			cw++; // white++	
 		}
 		return;
 	}	

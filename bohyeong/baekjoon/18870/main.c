@@ -1,11 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <stdlib.h>
 
 int m[1000000];
 int arr[1000000];
 int arr2[1000000];
 int count = 0;
-
 
 void quicksort(int arr[], int left, int right) {
 	int L = left, R = right;
@@ -17,7 +17,6 @@ void quicksort(int arr[], int left, int right) {
 			L++;
 		while (arr[R] > pivot) 
 			R--;
-		
 
 		if (L <= R) { 
 			if (L != R) { 
@@ -37,9 +36,10 @@ void quicksort(int arr[], int left, int right) {
 		quicksort(arr, L, right);
 }
 
+
 int main() {
 	int n, num, j;
-	int flag;
+	
 	scanf("%d", &n);
 
 	for (int i = 0; i < n; i++) {
@@ -48,31 +48,13 @@ int main() {
 	}
 
 	quicksort(arr, 0, n - 1);
+	int flag = 0;
 
-	for (int i = 0; i < n; i++) {
-		if (arr[i] == arr[i + 1]) {
-			arr2[count] = arr[i];
-			count++;
-			while (arr[i] == arr[i + 1]) {
-				i++;
-			}
-			i++;
-		}
-		if (arr[i] != arr[i + 1] && arr[i+1] != 0) {
-			arr2[count] = arr[i];
-			count++;
-		
-		}
+	arr2[0] = arr[0];
+	int count = 1;
+	for (int i = 1; i < n; i++) {
+		if (arr[i] != arr2[count - 1]) arr2[count++] = arr[i];
 	}
-
-	/*printf("arr1: ");
-	for (int i = 0; i < n; i++) {
-		printf("%d |", arr[i]);
-	}
-	printf("\n");
-	for (int i = 0; i < count; i++) {
-		printf("%d |", arr2[i]);
-	}*/
 
 	for(int i=0; i<n; i++){
 		int left = 0;
@@ -93,6 +75,7 @@ int main() {
 		printf("%d ", mid);
 	}
 	
+	printf("\n");
 	return 0;
 
 }
