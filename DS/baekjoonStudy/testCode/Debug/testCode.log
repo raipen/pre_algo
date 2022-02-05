@@ -1,2 +1,3 @@
 ﻿  testCode.cpp
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\testCode\testCode.cpp(13,12): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
   testCode.vcxproj -> C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\Debug\testCode.exe
