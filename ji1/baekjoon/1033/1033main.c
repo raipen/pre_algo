@@ -139,6 +139,7 @@ int main() {
     c--;
     while (c--) {
         scanf("%d %d %d %d", &a, &b, &p, &q);
+<<<<<<< HEAD
         int gcd = _gcd(node[a], node[b]);   //a와 b의 최대공약수 구하기
         p *= node[b] / gcd; // a*b/gcd ==최소 공배수, 즉 node[a]에 node[b]/gcd를 곱하면 최소 공배수가 된다 -> (최고공배수) * (p와 q의 비율)
         q *= node[a] / gcd;
@@ -146,14 +147,27 @@ int main() {
         bfs(b, q, m, node); //b와 관련된 모든것에 q만큼 곱하기
         m.data[a][b] = 1;   //a와 b를 서로 연결된 것으로 변경
         m.data[b][a] = 1;   //a와 b를 서로 연결된 것으로 변경
+=======
+        int gcd = _gcd(node[a], node[b]);
+        p *= node[b] / gcd;
+        q *= node[a] / gcd;
+        bfs(a, p, m, node);
+        bfs(b, q, m, node);
+        m.data[a][b] = 1;
+        m.data[b][a] = 1;
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
     }
 
     int g = node[0];
     for (int i = 1;i < m.size;i++) {
         g = _gcd(g, node[i]);
     }
+<<<<<<< HEAD
     //g는 전체 node[0]~node[n-1]까지의 최대공약수
     printArr(node, m.size, g);  //node에 있는 값을 g로 나눠서 출력
+=======
+    printArr(node, m.size, g);
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
 
     return 0;
 }

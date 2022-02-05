@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\1021번\main.c(69,29): warning C4020: 'get_rear': 실제 매개 변수가 너무 많습니다.
+C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\1021번\main.c(98,6): warning C4101: 'w' :참조되지 않은 지역 변수입니다.
+  1021번.vcxproj -> C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\Debug\1021번.exe

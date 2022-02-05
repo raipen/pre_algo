@@ -2,12 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+<<<<<<< HEAD
 int s,cur=1;
+=======
+int s, cur = 1;
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
 int* arr;
 
 int ch(int n, int t) {
     arr[t] = -1;
+<<<<<<< HEAD
     for (int i = 0;i<=n/2;) {
+=======
+    for (int i = 0;i <= n / 2;) {
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
         int k = cur++ % s;
         if (t == k) return i;
         if (arr[k] == -1) continue;
@@ -29,8 +37,15 @@ int main() {
     int r = 0, t;
     for (int i = 0; i < c;i++) {
         scanf("%d", &t);
+<<<<<<< HEAD
         r += ch(s-i, t%s);
     }
     printf("%d", r);
 	return 0;
+=======
+        r += ch(s - i, t % s);
+    }
+    printf("%d", r);
+    return 0;
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
 }
