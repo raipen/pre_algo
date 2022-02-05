@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\1956\main.c(4,1): warning C4005: 'max': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdlib.h(1282): message : 'max'의 이전 정의를 참조하십시오.
+  1956.vcxproj -> C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\Debug\1956.exe

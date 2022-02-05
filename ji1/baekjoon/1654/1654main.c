@@ -10,6 +10,16 @@ long long c(int k, long long* a, long long  l) {
 }
 
 long long r(int k, long long  n, long long* a, long long s) {
+<<<<<<< HEAD
+	long long  cur1 = 1,cur2 = s / n;
+	while (1) {
+		long long m = (cur1 + cur2) / 2;
+		if (c(k, a, m) >= n)
+			cur1 = m+1;
+		else
+			cur2 = m-1;
+		if (cur1>cur2)
+=======
 	long long  cur1 = 1, cur2 = s / n;
 	while (1) {
 		long long m = (cur1 + cur2) / 2;
@@ -18,6 +28,7 @@ long long r(int k, long long  n, long long* a, long long s) {
 		else
 			cur2 = m - 1;
 		if (cur1 > cur2)
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
 			break;
 	}
 	return cur2;
@@ -25,13 +36,23 @@ long long r(int k, long long  n, long long* a, long long s) {
 
 int main() {
 	int k;
+<<<<<<< HEAD
+	long long n, a[10000],s = 0;
+=======
 	long long n, a[10000], s = 0;
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
 	scanf("%d %lld", &k, &n);
 
 	for (int i = 0;i < k;i++) {
 		scanf("%lld", &a[i]);
+<<<<<<< HEAD
+		s+= a[i];
+	}
+	printf("%lld", r(k,n,a,s));
+=======
 		s += a[i];
 	}
 	printf("%lld", r(k, n, a, s));
+>>>>>>> 455c203c9f5f174e33d0bbae9310c7b33361ef74
 	return 0;
 }
