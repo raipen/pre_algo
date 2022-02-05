@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\18870\main.c(41,14): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\18870\main.c(42,6): warning C4101: 'flag' :참조되지 않은 지역 변수입니다.
+  18870.vcxproj -> C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\Debug\18870.exe
