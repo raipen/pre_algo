@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\1167\main.c(128,12): warning C4101: 'flag' :참조되지 않은 지역 변수입니다.
+C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\1167\main.c(124): warning C4716: 'find_dia': 값을 반환해야 합니다.
+  1167.vcxproj -> C:\Users\ME\Desktop\pre_algo\bohyeong\baekjoon\Debug\1167.exe

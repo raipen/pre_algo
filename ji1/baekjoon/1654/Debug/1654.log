@@ -1,0 +1,5 @@
+﻿  1654main.c
+I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\1654\1654main.c(8,16): warning C4244: '+=': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\1654\1654main.c(23,13): warning C4244: 'return': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\1654\1654main.c(15,1): warning C4244: '초기화 중': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  1654.vcxproj -> I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\Debug\1654.exe
