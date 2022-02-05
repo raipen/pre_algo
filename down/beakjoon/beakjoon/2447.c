@@ -26,7 +26,6 @@ void make_star(int row, int col, int size)
 				ary[i][j] = 1;
 			}
 		}
-
 		return;
 	}
 	for (int i = row; i < row + size; i+=size/3)
