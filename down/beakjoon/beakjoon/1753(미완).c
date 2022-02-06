@@ -3,7 +3,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#define INF 999999999
+#define INF 99999999
 typedef struct node* nodePointer;
 typedef struct node
 {
