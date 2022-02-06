@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define MAX_VERT_SIZE 401
-#define INF 10001
+#define INF 999999999
 
 int VertSize, EdgeSize;
 int VertFrom, VertTo, EdgeWeight;
