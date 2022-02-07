@@ -123,7 +123,10 @@
     <ClCompile Include="4386.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="소스.c">
+    <ClCompile Include="1620.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1931.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
