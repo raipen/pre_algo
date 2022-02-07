@@ -1,3 +1,4 @@
 ﻿  main.c
-I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\test\main.c(22,35): warning C4244: '+=': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\test\main.c(41,17): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\test\main.c(42,9): warning C4101: 'flag' :참조되지 않은 지역 변수입니다.
   test.vcxproj -> I:\학교\2022\알고리즘 실습\pre_algo\ji1\baekjoon\Debug\test.exe
