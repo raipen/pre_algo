@@ -40,7 +40,7 @@ int main()
 		{
 			relation_map[++cnt].star_1 = i;
 			relation_map[cnt].star_2 = j;
-			relation_map[cnt].length = sqrt(pow((star_list[i].x - star_list[j].x), 2) + pow((star_list[i].y - star_list[j].y), 2));
+			relation_map[cnt].length = sqrt(pow_dawns((star_list[i].x - star_list[j].x), 2) + pow_dawns((star_list[i].y - star_list[j].y), 2));
 		}
 	}
 	qsort(relation_map, ((size+1)*(size))/2, sizeof(star_relate), compare);
