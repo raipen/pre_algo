@@ -21,7 +21,7 @@ int findparent(int parent[], int a, int b) {
 //두 부모 노드를 합치는 함수
 int unionparent(int parent[], int a, int b) {
 	count++;
-	if (findparent(parent, a, b)) {
+	if (findparent(parent, a, b)) { //사이클 이면?
 		flag = 1;
 		cy_num = count;
 	}
@@ -31,7 +31,6 @@ int unionparent(int parent[], int a, int b) {
 	if (a < b) parent[b] = a; //두 부모노드 중 작은 친구를 부모로 설정!
 	else parent[a] = b;
 }
-
 
 int main() {
 	int n, m;
