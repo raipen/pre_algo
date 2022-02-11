@@ -1,3 +1,4 @@
+//bfs
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,7 +9,7 @@ typedef struct position
 }position;
 int check[103][103];
 char picture[103][103];
-position queue[10501];
+position queue[10501000];
 int rear = 0;
 int front;
 int size;
@@ -16,11 +17,10 @@ int cnt=0;
 void find_section();
 void inq(position item);
 position deq();
-int save_section();
-void blind_section();
 void init();
 void bfs(int row,int col);
 void divide_setion();
+void make_blind();
 int main()
 {
 	scanf("%d ", &size);
@@ -40,6 +40,10 @@ int main()
 		}
 		getchar();
 	}
+	divide_setion();
+	printf("%d ", cnt);
+	init();
+	make_blind();
 	divide_setion();
 	printf("%d", cnt);
 	return 0;
@@ -116,6 +120,7 @@ void find_section()
 }
 void inq(position item)
 {
+	check[item.row][item.col] = 1;
 	queue[++rear] = item;
 }
 position deq()
@@ -133,154 +138,7 @@ void init()
 			check[i][j] = 0;
 		}
 	}
-}
-void blind_section()
-{
-	check[1][1] = cnt;
-	position tmp = { 1,1 }, tmp2;
-	inq(tmp);
-	while (1)
-	{
-		if (front == rear)
-			break;
-		tmp = deq();
-		if (picture[tmp.row][tmp.col] == 'R' || picture[tmp.row][tmp.col] == 'G')
-		{
-			if (!check[tmp.row - 1][tmp.col] && (picture[tmp.row - 1][tmp.col] == 'R' || picture[tmp.row - 1][tmp.col] == 'G'))
-			{
-				check[tmp.row - 1][tmp.col] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row - 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-			else if(!check[tmp.row - 1][tmp.col] && (picture[tmp.row - 1][tmp.col] == 'B'))
-			{
-				check[tmp.row - 1][tmp.col] = check[tmp.row][tmp.col]+1;
-				tmp2.row = tmp.row - 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-			if (!check[tmp.row + 1][tmp.col] && (picture[tmp.row + 1][tmp.col] == 'R' || picture[tmp.row + 1][tmp.col] == 'G'))
-			{
-				check[tmp.row + 1][tmp.col] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row + 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-			else if (!check[tmp.row + 1][tmp.col] && (picture[tmp.row + 1][tmp.col] == 'B'))
-			{
-				check[tmp.row + 1][tmp.col] = check[tmp.row][tmp.col] + 1;
-				tmp2.row = tmp.row + 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-			if (!check[tmp.row ][tmp.col-1] && (picture[tmp.row ][tmp.col-1] == 'R' || picture[tmp.row ][tmp.col-1] == 'G'))
-			{
-				check[tmp.row ][tmp.col-1] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row ;
-				tmp2.col = tmp.col-1;
-				inq(tmp2);
-			}
-			else if (!check[tmp.row][tmp.col-1] && (picture[tmp.row ][tmp.col-1] == 'B'))
-			{
-				check[tmp.row ][tmp.col-1] = check[tmp.row][tmp.col] + 1;
-				tmp2.row = tmp.row ;
-				tmp2.col = tmp.col-1;
-				inq(tmp2);
-			}
-			if (!check[tmp.row][tmp.col + 1] && (picture[tmp.row][tmp.col + 1] == 'R' || picture[tmp.row][tmp.col + 1] == 'G'))
-			{
-				check[tmp.row][tmp.col + 1] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row;
-				tmp2.col = tmp.col + 1;
-				inq(tmp2);
-			}
-			else if (!check[tmp.row][tmp.col + 1] && (picture[tmp.row][tmp.col + 1] == 'B'))
-			{
-				check[tmp.row][tmp.col + 1] = check[tmp.row][tmp.col] + 1;
-				tmp2.row = tmp.row;
-				tmp2.col = tmp.col + 1;
-				inq(tmp2);
-			}
-		}
-		else
-		{
-			if (!check[tmp.row + 1][tmp.col] && picture[tmp.row][tmp.col] == picture[tmp.row + 1][tmp.col])
-			{
-				check[tmp.row + 1][tmp.col] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row + 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-			else if ((!check[tmp.row + 1][tmp.col]) && (picture[tmp.row][tmp.col] != picture[tmp.row + 1][tmp.col]))
-			{
-				check[tmp.row + 1][tmp.col] = check[tmp.row][tmp.col] + 1;
-				tmp2.row = tmp.row + 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-			if (!check[tmp.row - 1][tmp.col] && picture[tmp.row][tmp.col] == picture[tmp.row - 1][tmp.col])
-			{
-				check[tmp.row - 1][tmp.col] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row - 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-			else if ((!check[tmp.row - 1][tmp.col]) && (picture[tmp.row][tmp.col] != picture[tmp.row - 1][tmp.col]))
-			{
-				check[tmp.row - 1][tmp.col] = check[tmp.row][tmp.col] + 1;
-				tmp2.row = tmp.row - 1;
-				tmp2.col = tmp.col;
-				inq(tmp2);
-			}
-
-			if (!check[tmp.row][tmp.col + 1] && picture[tmp.row][tmp.col + 1] == picture[tmp.row][tmp.col])
-			{
-				check[tmp.row][tmp.col + 1] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row;
-				tmp2.col = tmp.col + 1;
-				inq(tmp2);
-			}
-			else if ((!check[tmp.row][tmp.col + 1]) && (picture[tmp.row][tmp.col + 1] != picture[tmp.row][tmp.col]))
-			{
-				check[tmp.row][tmp.col + 1] = check[tmp.row][tmp.col] + 1;
-				tmp2.row = tmp.row;
-				tmp2.col = tmp.col + 1;
-				inq(tmp2);
-			}
-
-			if (!check[tmp.row][tmp.col - 1] && picture[tmp.row][tmp.col - 1] == picture[tmp.row][tmp.col])
-			{
-				check[tmp.row][tmp.col - 1] = check[tmp.row][tmp.col];
-				tmp2.row = tmp.row;
-				tmp2.col = tmp.col - 1;
-				inq(tmp2);
-			}
-			else if ((!check[tmp.row][tmp.col - 1]) && (picture[tmp.row][tmp.col - 1] != picture[tmp.row][tmp.col]))
-			{
-				check[tmp.row][tmp.col - 1] = check[tmp.row][tmp.col] + 1;
-				tmp2.row = tmp.row;
-				tmp2.col = tmp.col - 1;
-				inq(tmp2);
-			}
-		}
-		
-	}
-}
-int save_section()
-{
-	int max = 0;
-	for (int i = 1; i <= size; i++)
-	{
-		for (int j = 1; j <= size; j++)
-		{
-			if (check[i][j] > max)
-			{
-				max = check[i][j];
-			}
-		}
-	}
-	return max;
+	cnt = 0;
 }
 void divide_setion()
 {
@@ -310,29 +168,42 @@ void bfs(int row, int col)
 			break;
 		tmp = deq();
 		check[tmp.row][tmp.col] = 1;
-		if (picture[tmp.row][tmp.col + 1] == picture[tmp.row][tmp.col])
+		if (!check[tmp.row][tmp.col+1]&&(picture[tmp.row][tmp.col + 1] == picture[tmp.row][tmp.col]))
 		{
 			tmp2.row = tmp.row;
 			tmp2.col = tmp.col + 1;
 			inq(tmp2);
 		}
-		if (picture[tmp.row + 1][tmp.col] == picture[tmp.row][tmp.col])
+		if (!check[tmp.row+1][tmp.col ] && (picture[tmp.row + 1][tmp.col] == picture[tmp.row][tmp.col]))
 		{
 			tmp2.row = tmp.row + 1;
 			tmp2.col = tmp.col;
 			inq(tmp2);
 		}
-		if (picture[tmp.row][tmp.col - 1] == picture[tmp.row][tmp.col])
+		if (!check[tmp.row][tmp.col - 1] && (picture[tmp.row][tmp.col - 1] == picture[tmp.row][tmp.col]))
 		{
 			tmp2.row = tmp.row;
 			tmp2.col = tmp.col - 1;
 			inq(tmp2);
 		}
-		if (picture[tmp.row - 1][tmp.col] == picture[tmp.row][tmp.col])
+		if (!check[tmp.row-1][tmp.col ] && (picture[tmp.row - 1][tmp.col] == picture[tmp.row][tmp.col]))
 		{
 			tmp2.row = tmp.row - 1;
 			tmp2.col = tmp.col;
 			inq(tmp2);
+		}
+	}
+}
+void make_blind()
+{
+	for (int i = 1; i <= size; i++)
+	{
+		for (int j = 1; j <= size; j++)
+		{
+			if (picture[i][j] == 'G')
+			{
+				picture[i][j] = 'R';
+			}
 		}
 	}
 }
