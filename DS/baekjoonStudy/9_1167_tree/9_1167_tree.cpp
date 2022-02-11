@@ -10,14 +10,14 @@ V가 최대 10만이라서 모든 노드를 돌리면 N^2으로 시간초과 나옴.
 #define MAX_NUM 100001
 using namespace std;
 
-int visited[MAX_NUM];
-vector<pair<int, int>> arr[MAX_NUM];
+int visited[MAX_NUM]; 
+vector<pair<int, int>> arr[MAX_NUM]; // 그래프
 
 void dfs(int node, int r);
-void visited_init(int); 
+void visited_init(int);  // 방문 초기화
 
-int res = 0;
-int longNode = 0;
+int res = 0; // 지름
+int longNode = 0; // 가장 멀리있는 노드
 
 int main(void) {
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
