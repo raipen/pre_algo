@@ -1,66 +1,74 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
 
-int chicken[1048577];
-int tmp[1048577];
-int n, k;
-int cnt = 0;
+using namespace std;
 
-void QuickSort(int* arr, int left, int right);
+int n;
 
-int main()
-{
-    int i, j;
+int parents[101];
 
-    scanf("%d", &n); //치킨집의 개수
-    cnt = n;
+vector<pair<double, double> > nodes;
+vector<pair<pair<double, double>, double> > edges;
 
-    for (i = 0; i < n; i++)
-    {
-        scanf("%d", &chicken[i]);
-    }
 
-    scanf("%d", &k); //현재 정렬을 진행중인 회원들의 수
-
-    for (i = 0; i < k; i++)
-    {
-        QuickSort(&chicken[i * n / k], 0, n / k - 1);
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", chicken[i]);
-    }
-
-    return 0;
+bool cmp(pair<pair<double, double>, double> a, pair<pair<double, double>, double> b) {
+    return a.second < b.second;
 }
 
-void QuickSort(int* arr, int left, int right) {
-    int L = left, R = right;
-    int temp;
-    int pivot = arr[(left + right) / 2]; //피봇 위치(중앙)의 값을 받음.
-    //아래의 while문을 통하여 pivot 기준으로 좌, 우 크고 작은 값 나열. = Partition
-    while (L <= R) {
+int get_parent(int x) {
+    if (parents[x] == x) return x;
+    return parents[x] = get_parent(parents[x]);
+}
 
-        //pivot이 중간 값이고, 비교 대상 arr[L], arr[R]은 pivot과 비교하니 중간 지점을 넘어가면 종료로 볼 수 있음.
-        while (arr[L] < pivot) //left부터 증가하며 pivot 이상의 값을 찾음.
-            L++;
-        while (arr[R] > pivot) //right부터 감소하며 pivot 이하 값을 찾음.
-            R--;
-        //L, R 모두 최대 pivot 위치까지 이동.
+void union_parents(int a, int b) {
+    a = get_parent(a);
+    b = get_parent(b);
 
-        if (L <= R) { //현재 L이 R이하면. (이유 : L>R 부분은 이미 정리가 된 상태임).
-            if (L != R) { //같지 않은 경우만.
-                temp = arr[L];
-                arr[L] = arr[R];
-                arr[R] = temp;
-            } //L과 R이 같다면 교환(SWAP)은 필요 없고 한 칸씩 진행만 해주면 됨.
-            L++; R--; //그리고 L,R 한 칸 더 진행
+    if (a > b) parents[a] = b;
+    else parents[b] = a;
+}
+
+void solution() {
+
+    double dist = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j) continue;
+            // 거리 계산  
+            dist = sqrt(pow(nodes[i].first - nodes[j].first, 2) + pow(nodes[i].second - nodes[j].second, 2));
+            // 두 별과 거리 넣기  
+            edges.push_back({ {i, j}, dist });
         }
     }
-    //조건 확인하여 재귀함수로.
-    if (left < R)
-        QuickSort(arr, left, R);
-    if (L < right)
-        QuickSort(arr, L, right);
+
+    sort(edges.begin(), edges.end(), cmp);
+
+    for (int i = 0; i < n; i++) parents[i] = i;
+
+    double sum = 0;
+    for (int i = 0; i < edges.size(); i++) {
+        if (get_parent(edges[i].first.first) != get_parent(edges[i].first.second)) {
+            sum += edges[i].second;
+            union_parents(edges[i].first.first, edges[i].first.second);
+        }
+    }
+
+    printf("%0.2f", sum);
 }
+
+int main(void) {
+
+    cin >> n;
+
+    double y, x;
+    for (int i = 0; i < n; i++) {
+        cin >> y >> x;
+        nodes.push_back({ y, x });
+    }
+
+    solution();
+}
+
+
