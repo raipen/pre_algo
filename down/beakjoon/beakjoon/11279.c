@@ -32,6 +32,7 @@ int main()
 }
 void input(int item)
 {
+
 	int tmp, parent, child;
 	child = ++heap_size;
 	parent = child / 2;

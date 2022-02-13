@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#define INFI 9999999//9999일때는 왜 안돼??
+#define INFI 9999999//
 int ary[2001][2001];
 int check[2001];
 int hint_check[2001];
