@@ -17,7 +17,7 @@ int dp[10001];
 //따라서 첫번째 잔은 무조건 마시는것이 합당 이때 4개의 잔이 주어졌을때 3번째 잔을 고를때 처럼 3가지 케이스중 하나를 골라야함
 //즉 dp[1]+(wine[2]+wine[4])or dp[1]+(wine[3]+wine[4])or dp[1]+(wine[2]+wine[3])
 // 
-//점화식으로 계산하면 dp[n]=(dp[n-3]+wine[n-1]+wine[n-2]or dp[n-2]+wine[n-2]or dp[n-1])이 됨
+//점화식으로 계산하면 dp[n]=(dp[n-3]+wine[n-1]+wine[n-2]or dp[n-2]+wine[n-1]or dp[n-1])이 됨
 // 
 //비슷한 문제로는 계단 오르기가 있음
 int choice(int first, int second, int third);
@@ -35,7 +35,7 @@ int main()
 	dp[0] = wine[0];
 
 	dp[1] = dp[0] + wine[1];
-
+	
 	dp[2] = choice(wine[0] + wine[2], wine[1] + wine[2], wine[0] + wine[1]);
 
 	//dp[0~2]까지는 직접 구해야 점화식의 인덱스를 맞춰줄 수 있음
