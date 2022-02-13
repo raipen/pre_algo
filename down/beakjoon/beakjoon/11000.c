@@ -1,22 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 typedef struct class
 {
 	int start;
 	int end;
 }class;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 class room[200001];
 
 int minheap[200001];
@@ -122,40 +113,4 @@ int delete()
 		}
 	}
 	return min;
-=======
-=======
->>>>>>> Stashed changes
-class curri[200001];
-int compare(const void* a, const void* b)
-
-
-int main()
-{
-	int size;
-	scanf("%d", &size);
-	for (int i = 0; i < size; i++)
-	{
-		scanf("%d %d", &curri[i].start, &curri[i].start);
-	}
-
-	qsort(class, size, sizeof(class), compare);
-
-	return 0;
-}
-int compare(const void* a, const void* b)
-{
-	mem num1 = *(member*)a;
-	member num2 = *(member*)b;
-
-	if (num1.time > num2.time)
-		return 1;
-
-	if (num1.time < num2.time)
-		return -1;
-
-	return 0;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }
