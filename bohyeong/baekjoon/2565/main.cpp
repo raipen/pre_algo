@@ -36,7 +36,7 @@ int main() {
 		maxnode = max(maxnode, dp[i]);
 	}
 
-	cout << n - maxnode << endl;
+	cout << n - maxnode << endl;// endl 은근 버퍼 많이 쓰기 때문에 '\n' 으로 하는게 좋음	
 
 	return 0;
 }
