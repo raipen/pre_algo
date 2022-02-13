@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -11,6 +15,7 @@ typedef struct class
 	int end;
 }class;
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 class room[200001];
 
@@ -118,6 +123,8 @@ int delete()
 	}
 	return min;
 =======
+=======
+>>>>>>> Stashed changes
 class curri[200001];
 int compare(const void* a, const void* b)
 
@@ -147,5 +154,8 @@ int compare(const void* a, const void* b)
 		return -1;
 
 	return 0;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
