@@ -24,6 +24,7 @@
     <ProjectGuid>{88d41760-469e-4c0c-a945-812fa4e4ac13}</ProjectGuid>
     <RootNamespace>My1021번</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>1021</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
