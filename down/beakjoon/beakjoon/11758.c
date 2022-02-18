@@ -28,24 +28,24 @@ int find_dir(dot a, dot b, dot c)
 	{
 		if (a.x < b.x)
 		{
-			if ((c.y - a.y) == ((a.y - b.y) / (a.x - b.x)) * (c.x - a.x))
+			if ((c.y - a.y)* (a.x - b.x) == ((a.y - b.y)) * (c.x - a.x))
 			{
 				return 0;
 			}
-			else if ((c.y - a.y) > ((a.y - b.y) / (a.x - b.x)) * (c.x - a.x))
+			else if ((c.y - a.y) * (a.x - b.x) > ((a.y - b.y)) * (c.x - a.x))
 			{
-				return 1;
+				return -1;
 			}
 			else
-				return -1;
+				return 1;
 		}
 		else
 		{
-			if ((c.y - a.y) == ((a.y - b.y) / (a.x - b.x)) * (c.x - a.x))
+			if ((c.y - a.y) * (a.x - b.x) == ((a.y - b.y)) * (c.x - a.x))
 			{
 				return 0;
 			}
-			else if ((c.y - a.y) > ((a.y - b.y) / (a.x - b.x)) * (c.x - a.x))
+			else if ((c.y - a.y) * (a.x - b.x) > ((a.y - b.y)) * (c.x - a.x))
 			{
 				return -1;
 			}
