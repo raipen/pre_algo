@@ -51,9 +51,9 @@ int bfs()
 			if (i == answer)
 			{
 				return parent.jump_num + 1;
-			}
+			}/*
 			if (i > answer)
-				return -1;
+				return -1;*/
 			if (!check[i])
 			{
 				tmp.index = i;

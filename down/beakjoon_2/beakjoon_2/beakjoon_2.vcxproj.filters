@@ -51,9 +51,6 @@
     <ClCompile Include="..\..\beakjoon\beakjoon\10026.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\10802.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\10845.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -63,25 +60,10 @@
     <ClCompile Include="..\..\beakjoon\beakjoon\10989.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\11000.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\11279.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\11399.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\11403.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\11582.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\11753.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\11758(미완).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\17298.c">
@@ -93,25 +75,10 @@
     <ClCompile Include="..\..\beakjoon\beakjoon\18870.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\1931.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\1956.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\1966.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\1991.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\20040.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\2110.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\2156.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\2178.c">
@@ -123,52 +90,10 @@
     <ClCompile Include="..\..\beakjoon\beakjoon\2447.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\2475.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\2493.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\2565.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\2630.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\2740.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\2753.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\4153.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\4386.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\4803.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\4949.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\5430.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\7569.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\7662.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\beakjoon\beakjoon\7675.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\9370.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\beakjoon\beakjoon\9372.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1012.c">
@@ -224,6 +149,90 @@
     </ClCompile>
     <ClCompile Include="10971.c">
       <Filter>소스 파일\bruth force</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\11758.c">
+      <Filter>소스 파일\math</Filter>
+    </ClCompile>
+    <ClCompile Include="11066.c">
+      <Filter>소스 파일\dinamic programing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\1931.c">
+      <Filter>소스 파일\dinamic programing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\1956.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\1966.c">
+      <Filter>소스 파일\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\4153.c">
+      <Filter>소스 파일\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\2740.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\9370.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\7569.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\4803.c">
+      <Filter>소스 파일\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\2753.c">
+      <Filter>소스 파일\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\2493.c">
+      <Filter>소스 파일\stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\5430.c">
+      <Filter>소스 파일\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\4386.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\20040.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\11000.c">
+      <Filter>소스 파일\dinamic programing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\2475.c">
+      <Filter>소스 파일\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\4949.c">
+      <Filter>소스 파일\stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\2156.c">
+      <Filter>소스 파일\dinamic programing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\9372.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\11399.c">
+      <Filter>소스 파일\dinamic programing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\10802.c">
+      <Filter>소스 파일\stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\2565.c">
+      <Filter>소스 파일\dinamic programing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\11403.c">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\7662.c">
+      <Filter>소스 파일\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\beakjoon\beakjoon\11279.c">
+      <Filter>소스 파일\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="15649.c">
+      <Filter>소스 파일\bruth force</Filter>
+    </ClCompile>
+    <ClCompile Include="2468.c">
+      <Filter>소스 파일\graph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
