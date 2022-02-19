@@ -80,7 +80,7 @@ void find_shortest(int n, int v, int g, int h) {
 				else
 					ch[i] = ch[v];
 			}
-			else if (dis[i] == dis[v] + distance) {
+			else if (dis[i] == dis[v] + distance) { // 최단경로 중복
 				dis[i] = dis[v] + distance;
 				if ((v == g && i == h) || (v == h && i == g)) // gh 도로 체크
 					ch[i] = 1;
