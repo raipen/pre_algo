@@ -1,3 +1,23 @@
 ﻿  testCode.cpp
-C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\testCode\testCode.cpp(13,12): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\testCode\testCode.cpp(51,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\testCode\testCode.cpp(52,38): warning C4244: '인수': '_Ty1'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty1=double
+          ]
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\testCode\testCode.cpp(52,74): warning C4244: '인수': '_Ty2'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty2=double
+          ]
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\testCode\testCode.cpp(54,63): warning C4244: '인수': '_Ty2'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty2=double
+          ]
+C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\testCode\testCode.cpp(54,41): warning C4244: '인수': '_Ty1'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty1=double
+          ]
   testCode.vcxproj -> C:\Users\JDS\Desktop\자료\Algorithm-study\pre_algo\DS\baekjoonStudy\Debug\testCode.exe
