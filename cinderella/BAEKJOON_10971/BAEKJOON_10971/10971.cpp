@@ -5,16 +5,16 @@ using namespace std;
 #define endl '\n'
 #define MAX 11
 
-int Size, Answer = 100000000;
+int Size, Answer = 100000000;//INF
 int MAP[MAX][MAX];
 bool Visited[MAX];
 int StartNode;
 
 void DFS(int nodePos, int weight, int cnt)
 {
-    if (cnt == Size - 1)
+    if (cnt == Size - 1)    //이동 size - 1번 했을때
     {
-        if (MAP[nodePos][StartNode])
+        if (MAP[nodePos][StartNode])    //현재 위치에서 첫 노드로 돌아올 수 있으면
         {
             Answer = min(Answer, weight + MAP[nodePos][StartNode]); //더 작은값 저장
             return;
@@ -49,13 +49,13 @@ int main(void)
     //</input>
 
     //<loop - rec>
-    for (int i = 1; i <= Size; i++)
-    {
-        StartNode = i;
-        Visited[i] = true;
-        DFS(i, 0, 0);
-        Visited[i] = false;
-    }
+    //for (int i = 1; i <= Size; i++)
+    //{
+        StartNode = 1;
+        Visited[1] = true;
+        DFS(1, 0, 0);
+        Visited[1] = false;
+    //}
     //</loop - rec>
 
     //<output>
