@@ -24,8 +24,8 @@ using namespace std;
 int dirY[] = { -1, 0, 1, 0 };
 int dirX[] = { 0, 1, 0, -1 };
 int n; int sum = 0; int ct = 0; int start = 0; int minn = 10000001;
-vector<vector<int>> arr(15,vector<int>(15,0)); // 2차원배열 (15,0)
-vector<int> visited(15, 0); //방문 확인 벡터
+vector<vector<int>> arr(16,vector<int>(15,0)); // 2차원배열 (15,0)
+vector<int> visited(16, 0); //방문 확인 벡터
 vector<int> v1;
 
 void dfs(int index) {
